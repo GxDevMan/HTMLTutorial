@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Canvas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Canvas Try</h1>
+        <canvas id="thiscanvas">
+        Your browser does not support the canvas tag.
+        </canvas>
+    <script>
+        var c = document.getElementById("thiscanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(20, 20, 75, 50);
+
+        //Turn transparency on
+        ctx.globalAlpha = 0.2;
+        ctx.fillStyle = "blue"; 
+        ctx.fillRect(50, 50, 75, 50); 
+        ctx.fillStyle = "green"; 
+        ctx.fillRect(80, 80, 75, 50);
+    </script>
+        <div>Canvas try</div>
+    </body>
+</html>
