@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JS Tester</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script src="QDSA.js"></script>
+        <script src ="object test.js"></script>
+        <h1 id="result">Result</h1>
+        <p id="theory">This is a test</p>
+        <script>
+            function setOutput()
+            {
+                //document.getElementById("theory").innerHTML = person.fullName();
+                document.getElementById("theory").innerHTML = qtest.dequeue();
+            }
+            function enq()
+            {
+                var buffer = document.getElementById("inputfield").value;
+                document.getElementById("Result").innerHTML = qtest.enqueue(buffer);
+                document.getElementById("inputfield").value = "";
+            }
+            function print()
+            {
+                var buffer = qtest.printall();
+                document.getElementById("Result").innerHTML = buffer;
+            }
+        </script>
+        <input id ="inputfield" type="text" name="Enquee" value=""/>
+        <input type="button" onclick="setOutput()" value="Deque" />
+        <input type="button" onclick="enq()" value="Enqueue" />
+        <input type="button" onclick="print()" value="Print All" />
+        
+        <div>Js Tester</div>
+    </body>
+</html>
