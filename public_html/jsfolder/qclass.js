@@ -10,7 +10,7 @@ class Queue
         this.size = 100;
         this.firstpointer = -1;
         this.lastpointer = -1;
-        this.x[size];
+        this.x(size);
     }
     setsize(x)
     {
@@ -49,4 +49,4 @@ class Queue
         return store;
     }
 }
-
+let Queue1 = new Queue();
