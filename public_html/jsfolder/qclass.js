@@ -10,10 +10,10 @@ class Queue {
         this.lastpointer = -1;
         this.x = Array(this.size);
     }
-    setsize(x) {
+    setsize(input) {
         if (x > 0) {
-            this.size = x;
-            this.x = new Array(this.x);
+            this.size = input;
+            this.x = new Array(x);
         }
     }
     clear() {
@@ -47,5 +47,17 @@ class Queue {
             this.firstpointer = (this.firstpointer + 1) % this.size;
         }
         return store;
+    }
+    printAll() {
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            var store = "";
+            for (var i = 0; i < this.size; i++) {
+                store = this.x[i] + " ";
+            }
+            return store;
+        }
+
     }
 }

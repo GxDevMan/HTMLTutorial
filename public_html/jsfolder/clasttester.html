@@ -22,10 +22,16 @@
             var store = document.getElementById("inputfield").value;
             myQueue1.enqueue(store);
         }
+
+        function printAll() {
+            var Store = myQueue1.printAll();
+            document.getElementById("result").innerHTML = Store;
+        }
     </script>
     <input id="inputfield" type="text" name="Enquee" value="" />
     <input type="button" onclick="deq()" value="Deque" />
     <input type="button" onclick="enq()" value="Enqueue" />
+    <input type="button" onclick="printAll()" value="Printall" />
 </body>
 
 </html>

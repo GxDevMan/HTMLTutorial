@@ -9,6 +9,7 @@ class Queue {
         this.firstpointer = -1;
         this.lastpointer = -1;
         this.x = Array(this.size);
+        this.compile = "";
     }
     setsize(x) {
         if (x > 0) {
@@ -48,6 +49,19 @@ class Queue {
         }
         return store;
     }
+    printall() {
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            for (var i = 0; i < this.size; i++) {
+                this.compile = this.x[i] + " ";
+            }
+            return this.compile;
+        }
+
+    }
+
+
 }
 var qtest = {
     size: 100,
@@ -85,8 +99,9 @@ var qtest = {
         return store;
     },
     printall: function() {
+        var compile = "";
         for (var i = 0; i < this.size; i++) {
-            var compile = this.x[i] + " ";
+            compile = this.x[i] + " ";
         }
         return compile;
     }
